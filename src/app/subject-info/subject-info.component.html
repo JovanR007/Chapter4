@@ -1,0 +1,13 @@
+<ul *ngFor="let subject of subjectInformation">
+    <li (click)= "subjectInfo(subject.subject)" >{{subject.subject}}</li>
+    <div *ngIf = "pickSubject !=subject.subject;else unpicked">
+        
+    </div>
+    
+    <ng-template #unpicked>
+        <li *ngFor="let students of subject.students">{{students}}</li>
+    </ng-template>
+</ul>
+
+
+

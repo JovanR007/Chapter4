@@ -1,0 +1,13 @@
+<ul>
+    <li *ngFor="let student of studentInformation"
+    (click)="saveStudent(student)">
+    {{student.name}}</li>
+</ul>
+<h1>Exam Logs</h1>
+<ul>
+    <li *ngFor="let exam of examLogs">{{exam.studentName}} earned {{exam.studentScore}} over {{exam.examScore}} in {{exam.examName}} </li>
+</ul>
+ 
+<h1 *ngIf="pickedStudent!=null">Student Info</h1>
+
+<app-selected-student [displayStudent]="pickedStudent"></app-selected-student>

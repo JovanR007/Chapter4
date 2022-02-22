@@ -1,0 +1,19 @@
+<div>
+    {{displayStudent.name}}
+    {{displayStudent.age}}
+    {{displayStudent.course}}
+</div>
+<br>
+<div *ngIf="displayStudent!=null">
+    <label for="examName">Exam Name: </label>
+    <input id="examName" [(ngModel)]="examName" placeholder="Input Exams Name">
+    <br>
+    <label for="testPerf">Test Perfect Score: </label>
+    <input id="testPerf" type="number" [(ngModel)]="testPerf" placeholder="Input Exams Perfect Score">
+    <br>
+    <label for="studentScore">Student Score: </label>
+    <input id="studentScore" type="number" [(ngModel)]="studentScore" placeholder="Input Students Score">
+    <br>
+    <button>Log Exam</button>
+    <br>
+</div>
